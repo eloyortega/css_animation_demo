@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+	<head>
+	<title>Animation Demo</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Roboto+Condensed&display=swap');
+
+		* {
+			box-sizing: border-box;
+			margin: 0;
+			font-family: 'Roboto Condensed', sans-serif; 
+		}
+		
+		h1{
+			font-family: 'Righteous', cursive;
+		}
+
+		.container {
+			max-width: 500px;
+			margin: 0 auto;
+			background: #f00;
+			padding:20px;
+		}
+
+		.socialcontainer {
+			display: flex;
+			justify-content:space-between;
+		}
+
+		.socialbox {
+			display: block;
+			width: 150px;
+			background: black;
+			text-align: center;
+			color: #fff;
+			text-decoration: none;
+			padding: 20px;
+			border-radius: 20px;
+		}
+
+		.fa{
+			font-size:50px;
+			background:#ddd;
+			padding:15px;
+			width:80px;
+			border-radius:50%;
+		}
+		
+		@keyframes sam{
+			0%{
+				transform: scale(1,1) rotateY(0deg);
+				box-shadow: 0px 0px 0px 5px #fff;
+			}
+			50%{
+				transform: scale(1.2,1.2) rotateY(180deg);
+				box-shadow: 0px 0px 30px 40px #fff;
+			}
+			100%{
+				transform: scale(1,1) rotateY(360deg);
+				box-shadow: 0px 0px 0px 5px #fff;
+			}
+		}
+
+		.socialbox:hover .fa{
+			color:#000;
+			background:#fff;
+			animation: 2s sam linear infinite;
+		}
+		
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<h1>Connect with Us:</h1>
+		<div class="socialcontainer">
+			<a href="https://facebook.com" target="_blank" class="socialbox">
+				<i class="fa fa-facebook"></i>
+				<br>
+				Facebook
+			</a>
+			<a href="mailto:bob@test.com" class="socialbox">
+				<i class="fa fa-envelope"></i>
+				<br>
+				Email
+			</a>
+			<a href="tel:+12121231122" class="socialbox">
+				<i class="fa fa-phone"></i>
+				<br>
+				Call
+			</a>
+		</div>
+	</div>
+
+</body></html>
